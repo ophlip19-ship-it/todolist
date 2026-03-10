@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+    <style>
+        .textprop {
+            background-color: #fff;
+            color: red;
+            padding: 2px 5px;
+            border-radius: 6px;
+            margin-left: 3px;
+        }
+        .checkbox{
+            appearance: none;
+            width: 6px;
+            height: 6px;
+            border: blue;
+        }
+        
+        .width:checked{
+            border: 2px solid blue;
+
+        }
+
+        .width {
+            appearance: none;
+            border: 2px solid gray;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            width: 3vh;
+            height: 3vh;
+            align-items: center;
+            justify-self: center;
+            /* transform: translate(-1vh, -1vh); */
+        }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.5;
+            color: #000;
+        }
+
+        .start {
+            background-color: #2b7fff;
+            padding: 2px 4px;
+            margin-left: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .dark {
+            background-color: #000;
+            color: white;
+        }
+        .white{
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 5px 10px;
+            align-items: center;
+            /* border-radius: 10px; */
+            justify-content: space-between;
+            border-bottom:1px solid #161722;
+        }
+        .gray{
+            background-color: #161722; 
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding: 5px 10px;
+            align-items: center;
+            /* border-radius: 10px; */
+            justify-content: space-between;
+            border-bottom:1px solid #fff;
+
+        }
+        .whitet{
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            margin: auto 0; 
+            transform: translateY(-10vh);
+            flex-direction:column-reverse;
+            padding: 5px 10px;
+            align-items: center;
+            border-radius: 10px;
+            border-bottom:1px solid #161722;
+        }
+        .grayt{
+            background-color: #161722; 
+            color: #fff;
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 5px 10px;
+            margin: auto 0;
+            transform: translateY(-10vh);
+            align-items: center;
+            border-radius: 10px;
+            justify-content: space-between;
+            border-bottom:1px solid #fff;
+
+        }
+        .hidden{
+            display: hidden;
+        }
+    </style>
+</head>
+
+<body id="body-color" class="body mt-0   bg-cover bg-center bg-no-repeat bg-fixed bg-opacity-[0.7] w-full">
+    <div id="background" class=" bg-[url(bg-mobile-light.jpg)] bg-center bg-cover  bg-no-repeat mt-0   flex flex-col h-[30vh] items-center   lg:bg-[url(bg-desktop-light.jpg)] lg:bg-no-repeat lg:bg-center lg: ">
+        <div class="flex flex-row items-center  justify-between w-[90%] mt-5 mx-auto   ">
+            <h1 class="text-white text-4xl text-bold  flex flex-row left  ">TODO</h1>
+            <img src="icon-moon.svg" alt="moon" id="chage">
+
+        </div>
+        <div id="display" class=" flex text-3xl  text-green-400 ">00:00:00</div>
+        <main id="main" class="flex flex-row lg:flex lg:flex-row bg-[white] flex items-center justify-between  translate-y-[2vh]  rounded-lg px-5 py-3  text-center text-xl">
+            <input type="checkbox" name="" id="addBtn" class="cursor-pointer appearance-none w-6 h-6 border-2 border-gray-300 rounded-full width mr-3 lg:mr-4 ">
+            <input type="text" name="todo" id="myTodo" placeholder="Creat a new Todo...."
+                class="">
+            <!-- <button id="addBtn" class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">Add</button> -->
+        </main>
+    </div>
+
+    <div class=" p-[10px] rounded-[5px] translate-y-[-0vh] text-black-500 w-[80%] lg:w-[50%] mx-auto  ">
+        <ul id="todolist" class="flex-col lg:flex lg:flex-col items-center  translate-y-[-10vh]  rounded-lg p-5  text-center text-xl hidden lg:hidden ">
+            <li id="dashbar" class="flex flex-row items-center justify-center  text-[12px] lg:text-2xl">
+                <p class="px-4"><strong id="counter"></strong>items left</p>
+                <p class="px-4" ><strong id="complete"></strong> completed</p>
+                <!-- <p id="clear" class="">clear completed</p> -->
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- <button id="chage">dark mode</button> -->
+
+    <script src="mytodo.js"></script>
+</body>
+
+</html>
