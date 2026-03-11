@@ -51,7 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             deleteBtn.addEventListener('click', function () {
                 li.remove();
-                updatecount()
+                updatecount();
+                 updatecompleted();
             })
 
 
@@ -185,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     })
+
 
 
 
