@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 li.remove();
                 updatecount();
                  updatecompleted();
+                resetCountdown();
             })
 
 
@@ -193,3 +194,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 })
+
